@@ -31,14 +31,15 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    baseURL: 'HTTPS://LOGINXP.VERCEL.APP'
+    baseURL: 'HTTPS://LOGINXP.VERCEL.APP',
+    video: 'on'
   },
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+   {
+    name: 'chromium',
+     use: { ...devices['Desktop Chrome'] },
     },
 
     {
