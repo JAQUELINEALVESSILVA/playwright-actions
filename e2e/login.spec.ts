@@ -2,7 +2,7 @@ import { test, expect, Page } from '@playwright/test';
 
 test('usuário obrigatório', async ({ page }) => {
   await login(page, '', 'senha123')
-  await toast(page, 'Informe o seu nome de usuário!s')
+  await toast(page, 'Informe o seu nome de usuário!')
 });
 
 test('senha obrigatória', async ({ page }) => {
@@ -25,15 +25,20 @@ test('com sucesso', async ({ page }) => {
   await modal(page, 'Suas credenciais são válidas :)')
 })
 
+"custom helper para validar o elemento toast"
 const toast = async (page: Page, message: string) => {
   const target = page.locator('div[role=status]')
   await expect(target).toHaveText(message);
 }
 
+"Constante que guarda uma funçao custom helper para validar moldal"
+
 const modal = async (page: Page, message: string) => {
   const target = page.locator('.swal2-html-container')
   await expect(target).toHaveText(message);
 }
+
+"Constante login que guarda um custom helper para faezr login"
 
 const login = async (page: Page, user: string, pass: string) => {
     await page.goto('/')
