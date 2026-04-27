@@ -4,17 +4,14 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  Workflow_dispatch:
-
-  env:
-    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
+  workflow_dispatch:
+    
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-
+    
     - name: Get Code
       uses: actions/checkout@v4.2.2
 
