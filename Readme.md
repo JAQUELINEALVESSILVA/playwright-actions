@@ -2,7 +2,7 @@
 
 ## Sobre
 
-Repositório do treinamento: Workflow de testes contínuos em Playwright no Github Actions
+Workflow de testes contínuos em Playwright no Github Actions
 
 ## Stacks
 - Playwright
